@@ -58,7 +58,7 @@ ROOT_URLCONF = 'apt_pro_django.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -71,7 +71,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'apt_pro.wsgi.application'
+WSGI_APPLICATION = 'apt_pro_django.wsgi.application'
 
 
 # Database
