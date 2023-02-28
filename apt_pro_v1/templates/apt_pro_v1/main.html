@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {% load static %}
 
 <html>
@@ -21,5 +22,25 @@
                 </div>
             </div>
         </div>
+=======
+<html>
+    <head>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <title>apt pro</title>
+    </head>
+    <body>
+        <div>
+        <h1><a href="/">apt pro</a></h1>
+        </div>
+    
+    {% for post in posts %}
+        <div>
+            <p>published: {{ post.published_date }}</p>
+            <h1><a href="">{{ post.title }}</a></h1>
+            <p>{{ post.text|linebreaksbr }}</p>
+        </div>
+    {% endfor %}
+>>>>>>> 8d38eb917f6d53e1c41b931c8eabc1c9e483d6b9
     </body>
 </html>
