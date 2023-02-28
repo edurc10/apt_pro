@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from django.shortcuts import render, get_object_or_404, redirect
 from django.utils import timezone
 from models import Post
@@ -26,13 +25,3 @@ def post_new(request):
     else:
         form = PostForm()
     return render(request, 'apt_pro_v1/post_detail.html', {'form': form})
-=======
-from django.shortcuts import render
-from django.utils import timezone
-from .models import Post
-
-# Create your views here.
-def main(request):
-    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
-    return render(request, 'apt_pro_v1/main.html', {})
->>>>>>> 8d38eb917f6d53e1c41b931c8eabc1c9e483d6b9
