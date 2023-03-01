@@ -11,19 +11,6 @@ from django.db import models
 # import re
 
 
-# class AptProV1Post(models.Model):
-#     id = models.BigAutoField(primary_key=True)
-#     title = models.CharField(max_length=200)
-#     text = models.TextField()
-#     created_date = models.DateTimeField()
-#     published_date = models.DateTimeField(blank=True, null=True)
-#     author = models.ForeignKey('AuthUser', models.DO_NOTHING)
-
-#     class Meta:
-#         managed = False
-#         db_table = 'apt_pro_v1_post'
-
-
 class Aptdeal(models.Model):
     deal_date = models.CharField(max_length=8)
     price = models.PositiveIntegerField()
@@ -227,19 +214,3 @@ class Visitlog(models.Model):
     class Meta:
         managed = False
         db_table = 'visitlog'
-
-# class Post(models.Model):  
-#     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-#     title = models.CharField(max_length=200)
-#     text = models.TextField()
-#     created_date = models.DateTimeField(
-#             default=timezone.now)
-#     published_date = models.DateTimeField(
-#             blank=True, null=True)
-
-#     def publish(self):
-#         self.published_date = timezone.now()
-#         self.save()
-
-#     def __str__(self):
-#         return self.title

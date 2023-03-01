@@ -1,15 +1,25 @@
 {% load static %}
 
+<!DOCTYPE html>
 <html>
-    <head>
-      <title>APT PRO</title>
-    </head>
-    <body>
-      <div>
-        <h1>APT PRO</h1>
-        <p>오늘의 실거래 현황</p>
-        <p>{% block content%}</p>
-        <p>{% endblock%}</p>
+  <head>
+    <title>APT PRO</title>
+  </head>
+  <body>
+    <div class="page-header">
+        <h1><a href="/">APT PRO</a></h1>
+    </div>
+    <div class="content container">
+      <div class="row">
+        <div class="col-md-8">
+          {% block content %}
+          {% endblock %}
+        </div>
       </div>
-    </body>
+    </div>
+    <div>
+      {% block footer %}
+      {% endblock %}
+    </div>
+</body>
 </html>

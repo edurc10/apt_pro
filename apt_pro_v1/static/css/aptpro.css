@@ -18,6 +18,10 @@ h1, h2, h3, h4 {
   font-family: "Apple SD Gothic Neo", "Roboto", sans-serif;
 }
 
+p{
+  font-family: "Apple SD Gothic Neo", "Roboto", sans-serif;
+}
+
 .date {
   color: #828282;
 }
