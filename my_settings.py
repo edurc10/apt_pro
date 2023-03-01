@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'apt_pro_v1',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [

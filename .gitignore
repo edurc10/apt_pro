@@ -5,3 +5,5 @@ myvenv
 db.sqlite3
 .DS_Store
 settings_backup.py
+my_settings_local.py
+ref_infomation/

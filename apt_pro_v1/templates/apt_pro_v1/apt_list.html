@@ -1,0 +1,10 @@
+{% extends 'apt_pro_v1/main.html' %}
+
+
+{% block content %}
+{% for aptid in aptid %}
+<div>
+  <h1>{% aptid.id %}</h1>
+</div>
+{% endfor %}
+{% endblock %}
