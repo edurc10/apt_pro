@@ -43,5 +43,11 @@ def Aptdata(request, aptid):
 def main(request):
     return render(request, 'apt_pro_v1/main.html', {})
 
+def apt_list(request):
+    return render(request, 'apt_pro_v1/apt_list.html', {})
+
+def footer(request):
+    return render(request, 'apt_pro_v1/footer.html', {})
+    
 def apt2me(request):
     return render(request, 'apt_pro_v1/apt2me.html', {})
