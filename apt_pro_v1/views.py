@@ -33,21 +33,18 @@ def postMember(request):
     else :
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     
-
-@api_view(['GET'])
-def Aptdata(request, aptid):
-    data = AptdealToday.objects.get(id = aptid)
-    serializers = TestDataSerializer(data, many=False)
-    return Response(serializers.data)
+# @api_view(['GET'])
+# def Aptdata(request, aptid):
+#     data = AptdealToday.objects.get(id = aptid)
+#     serializers = TestDataSerializer(data, many=False)
+#     return Response(serializers.data)
 
 def main(request):
-    return render(request, 'apt_pro_v1/main.html', {})
-
-def apt_list(request):
-    return render(request, 'apt_pro_v1/apt_list.html', {})
-
-def footer(request):
-    return render(request, 'apt_pro_v1/footer.html', {})
+    datas = AptdealToday.objects.all()
+    context = {'datas':datas}
+    # serializers = TestDataSerializer(data, many=False)
+    # return render(request, 'apt_pro_v1/main.html', serializers)
+    return render(request, 'apt_pro_v1/main.html', context)
     
 def apt2me(request):
     return render(request, 'apt_pro_v1/apt2me.html', {})

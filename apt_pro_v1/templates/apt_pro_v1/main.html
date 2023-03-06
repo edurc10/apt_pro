@@ -1,25 +1,45 @@
-{% load static %}
+{% extends 'apt_pro_v1/base.html' %}
 
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>APT PRO</title>
-  </head>
-  <body>
-    <div class="page-header">
-        <h1><a href="/">APT PRO</a></h1>
-    </div>
-    <div class="content container">
-      <div class="row">
-        <div class="col-md-8">
-          {% block content %}
-          {% endblock %}
-        </div>
-      </div>
-    </div>
-    <div>
-      {% block footer %}
-      {% endblock %}
-    </div>
-  </body>
-</html>
+{% block content %}
+<table class="table-one">
+  <colgroup>
+    <col width="70">
+    <col width="*">
+    <col width="64">
+    <col width="94">
+    <col width="110">
+  </colgroup>
+  <div>
+    <h2>오늘의 실거래 현황</h2>
+    <span>
+      {{ today }}03월01일
+    </span>
+    <span>
+      (단위:만원)
+    </span>
+  </div>
+  <thead>
+    <tr>
+      <th scope="col" order="-1" class="table-two">순위</th>
+      <th scope="col" order="-1" class="table-two">단지명</th>
+      <th scope="col" order="-1" class="table-two">거래일자</th>
+      <th scope="col" order="-1" class="table-two">층/전용면적</th>
+      <th scope="col" order="-1" class="table-two">거래금액<br>
+        신고가대비<br>(상승률)</th>
+  </tr>
+  </thead>
+    <tbody>
+      <tr>
+        {% for data in datas %}
+        <tr><a>
+          <td align="center">{{ data.id }}</td>
+          <td align="center">{{ data.id }}</td>
+          <td align="center">{{ data.deal_date }}</td>
+          <td align="center">{{ data.apt_floor }}/{{ data.aot_size_id }}</td>
+          <td align="center">{{ data.price }}<br>{{ data.prev_price }}</td>
+        </tr></a>
+        {% endfor %}
+      </tr>
+    </tbody>
+</table>
+{% endblock %}

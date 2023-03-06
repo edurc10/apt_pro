@@ -1,0 +1,35 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static 'css/aptpro.css' %}">
+    <link rel="stylesheet" type="text.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>APT PRO</title>
+  </head>
+  <body class="body">
+    <div class="wrapper">
+      <div class="page-header">
+          <h1><a href="/">APT PRO</a></h1>
+      </div>
+      <div class="content container">
+        {% block content %}
+        {% endblock %}
+      </div>
+      <div>
+        <footer id="footer", class="css-footer" >
+          <div>
+            <section>
+              <small>
+              APT PRO. © APT PRO
+              </small>
+            </section>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>

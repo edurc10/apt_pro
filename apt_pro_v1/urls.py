@@ -7,7 +7,7 @@ urlpatterns = [
 # -------------------------------------------------------------------------------------------------
     path('', views.main, name='main'),
     path('apt2me', views.apt2me, name='apt2me'),
-    path('id/<int:aptid>', views.Aptdata, name='aptid'),
+    # path('id/<int:aptid>', views.Apt_list, name='aptid'),
     path('postMember/', views.postMember, name='postMember'),
 ]
 
